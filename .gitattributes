@@ -1,0 +1,9 @@
+# Forzar finales de línea LF en archivos de código y JSON
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Para otros archivos de texto, que usen autocrlf automático
+* text=auto

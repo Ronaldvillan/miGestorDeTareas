@@ -1,10 +1,13 @@
-.card {
+/* .card {
   background-color: black;
   color: white;
   width: 80%;
   margin: 2px auto;
   padding: 10px;
   font-size: 20px;
+
+  max-height: 300px; 
+  overflow-y: auto;  
 }
 
 .card ul {
@@ -14,11 +17,11 @@
 
 .card li {
   padding: 5px;
-  border-bottom: 1px solid white; /* Esta línea es opcional, se puede ocultar cuando no haya tareas */
+  border-bottom: 1px solid white; 
 }
 
 .card li:last-child {
-  border-bottom: none; /* Elimina la línea en el último elemento */
+  border-bottom: none;
 }
 
 .card li input[type="checkbox"] {
@@ -56,5 +59,86 @@
   font-family: 'Baloo 2', sans-serif;
   margin-top: 20px;
   padding: 20px;
-  margin-bottom: 40px; /* Más espacio debajo del mensaje */
+  margin-bottom: 40px;
+} */
+
+.card {
+  background-color: black;
+  color: white;
+  width: 80%;
+  margin: 2px auto;
+  padding: 10px;
+  font-size: 20px;
+
+  max-height: 300px; /* Limita la altura máxima */
+  overflow-y: auto;  /* Activa scroll vertical */
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Lista de items con flex para checkbox, índice y texto */
+.card li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid white; /* Línea divisoria */
+  gap: 5px; /* Espacio entre checkbox, índice y texto */
+}
+
+.card li:last-child {
+  border-bottom: none; /* Quita línea en último ítem */
+}
+
+/* Checkbox */
+.card li input[type="checkbox"] {
+  flex-shrink: 0; /* No se reduce */
+  width: 20px;
+  height: 20px;
+  border: 3px solid #FF6347;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+}
+
+.card li input[type="checkbox"]:checked {
+  background-color: #FF6347;
+  border-color: #FF6347;
+}
+
+.card li input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+/* Índice con ancho fijo */
+.todo-index {
+  flex: 0 0 25px; /* ancho fijo para índice */
+  font-weight: bold;
+}
+
+/* Texto que ocupa todo el espacio restante */
+.todo-task {
+  flex: 1; /* ocupa el resto del espacio */
+  word-wrap: break-word; /* permite quiebre de línea si texto es largo */
+}
+
+.no-tasks-message {
+  text-align: center;
+  font-size: 18px;
+  color: #FF6347;
+  font-family: 'Baloo 2', sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 40px;
 }

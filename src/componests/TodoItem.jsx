@@ -1,17 +1,22 @@
-// import React from "react"
 
-// export function TodoItem({ todo, toggleTodo }) {
+// import React from "react";
+
+// export function TodoItem({ todo, toggleTodo, index }) {
 //     const { id, task, completed } = todo;
 
 //     const handleTodoClick = () => {
 //         toggleTodo(id);
-//     }
-//     return<li class="card">
-//         <input type="checkbox" checked={completed} onChange={handleTodoClick} />
-//         {task}
-//     </li>
+//     };
 
+//     return (
+//     <li className="card">
+//     <input type="checkbox" checked={completed} onChange={handleTodoClick} />
+//     <span className="todo-index">{index + 1 }- </span> {/* Índice */}
+//     <span>{task}</span> {/* Tarea */}
+// </li>
+//     );
 // }
+
 import React from "react";
 
 export function TodoItem({ todo, toggleTodo, index }) {
@@ -22,15 +27,12 @@ export function TodoItem({ todo, toggleTodo, index }) {
     };
 
     return (
-        // <li className="card">
-        //     <input type="checkbox" checked={completed} onChange={handleTodoClick} />
-        //     <span className="todo-index">{index + 1}- {task}</span> {/* Muestra el índice + 1 después del checkbox */}
-        // </li>
         <li className="card">
-    <input type="checkbox" checked={completed} onChange={handleTodoClick} />
-    <span className="todo-index">{index + 1 }- </span> {/* Índice */}
-    <span>{task}</span> {/* Tarea */}
-</li>
+            <input type="checkbox" checked={completed} onChange={handleTodoClick} />
+            <span className="todo-index">{index + 1}-</span> {/* Índice fijo */}
+            <span className="todo-task">{task}</span> {/* Texto que se adapta */}
+        </li>
     );
 }
+
 
