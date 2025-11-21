@@ -1630,7 +1630,7 @@
   resolved "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-1.0.3.tgz"
   integrity sha512-2xCRM9q9FlzGZCdgDMJwc0gyUkWFtkosy7Xxr6sFgQwn+wMNIWd7xIvYNauU1r64B5L5rsGKy/n9TKJ0aAFeqQ==
 
-"@firebasegen/default-connector@link:dataconnect-generated\\js\\default-connector":
+"@firebasegen/default-connector@link:dataconnect-generated/js/default-connector":
   version "0.0.0"
   uid ""
 
@@ -8567,6 +8567,7 @@ react-scripts@^5.0.1:
 "react-todos@file:.":
   version "0.1.0"
   dependencies:
+    "@firebasegen/default-connector" "link:../../AppData/Local/Yarn/Cache/v6/npm-react-todos-0.1.0-70a358cb-b81c-4d83-a30a-a21491725ce1-1761148037157/node_modules/react-todos/dataconnect-generated/js/default-connector"
     "@testing-library/jest-dom" "^5.16.4"
     "@testing-library/react" "^13.3.0"
     "@testing-library/user-event" "^13.5.0"
@@ -8574,7 +8575,7 @@ react-scripts@^5.0.1:
     react "^18.2.0"
     react-dom "^18.2.0"
     react-scripts "^5.0.1"
-    react-todos "file:../../../AppData/Local/Yarn/Cache/v6/npm-react-todos-0.1.0-a0bf1dd4-c7fb-4b93-94b5-54f9d2299e8b-1742430884810/node_modules/react-todos"
+    react-todos "file:../../AppData/Local/Yarn/Cache/v6/npm-react-todos-0.1.0-70a358cb-b81c-4d83-a30a-a21491725ce1-1761148037157/node_modules/react-todos"
     uuid "^8.3.2"
     web-vitals "^2.1.4"
 

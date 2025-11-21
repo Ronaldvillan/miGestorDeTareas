@@ -1,48 +1,49 @@
-/* Estilo base para la notificación */
 .noti {
   background-color: black;
   color: white;
-  width: 100%; /* Asegúrate de que ocupe todo el ancho */
-  height: 180px; /* Aumentado para dar más espacio */
-  padding: 20px; /* Aumentado para mayor espacio */
-  position: fixed; /* Fijar en la parte inferior */
-  bottom: 0; /* Ubicar en la parte inferior */
-  left: 0; /* Asegurarse de que esté alineado a la izquierda */
+  width: 100%; 
+  min-height: 60px; /* asegura que no sea demasiado pequeño */
+  padding: 5px 20px; /* controla el espacio alrededor del contenido */
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 26px; /* Aumentado para mejor visibilidad */
-  font-family: 'Baloo 2', sans-serif; /* Mantenemos la fuente del resto del proyecto */
-  z-index: 1000; /* Asegúrate de que esté por encima de otras secciones */
+  align-items: center; /* mantiene el número centrado verticalmente */
+  font-size: 26px; 
+  font-family: 'Baloo 2', sans-serif; 
+  z-index: 1000; 
+  /* border: 3px solid #FF00FF; */
 }
 
 .noti p {
-  color: #FF6347; /* Rojo del resto del proyecto */
-  margin: 6px;
-  font-size: 80px; /* Aumentado para hacerlo más visible */
-  font-weight: bold; /* Resaltado el número */
+  color: #FF6347; 
+  margin: 0 6px; 
+  font-size: 60px; 
+  font-weight: bold; 
 }
 
 .noti span {
-  color: white; /* El resto del texto en blanco */
-  font-size: 26px; /* Ajustado el tamaño del texto */
-  font-weight: normal; /* Normal para el texto */
+  color: white; 
+  font-size: 20px; 
+  font-weight: normal; 
+  margin-left: 8px; 
 }
 
-/* Media Queries para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
   .noti {
-    height: 120px; /* Reducir la altura en dispositivos móviles */
-    padding: 10px; /* Reducir el espacio alrededor */
-    font-size: 18px; /* Reducir el tamaño de la fuente */
+    min-height: 40px; /* altura mínima para móviles */
+    padding: 5px 10px; 
+    font-size: 18px; 
   }
 
   .noti p {
-    font-size: 40px; /* Reducir el tamaño de la fuente del mensaje */
-    margin: 5px; /* Reducir el margen para que no quede tan alejado */
+    font-size: 36px; 
+    margin: 0 5px; 
   }
 
   .noti span {
-    font-size: 16px; /* Reducir el tamaño del texto adicional */
+    font-size: 16px; 
   }
+  
 }
